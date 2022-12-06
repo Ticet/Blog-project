@@ -1,5 +1,5 @@
 <?php
-    function displayPostsByTag() {
+    function displayPostsByTag($userID, $pageName) {
         include 'connection.php';
 
         $tag = $_GET['tag'];
@@ -39,7 +39,7 @@
 
                 <!--Like button-->
                 <form action="scripts/likescript.php" method="post">
-                    <center> <button type="submit" value="<?php echo $isLiked.' '.$row['post_id']?>" name="likeButton">
+                    <center> <button class="likeBTN" type="submit" value="<?php echo $isLiked.' '.$row['post_id'].' '.$pageName.'?tag='.$tag?>" name="likeButton">
                         <!--displaying like/unlike if user liked or not-->
                             <?php
                                 if($isLiked){

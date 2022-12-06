@@ -6,11 +6,13 @@ body {
 }
 
 
-.content {
-    margin-top: 3%;
-}
 
 
+
+
+
+
+/*tags*/
 .tagList {
     
     position: absolute;
@@ -18,7 +20,7 @@ body {
     left: 2%;
     background-color: rgba(236, 236, 236, 0.541);
     border-radius: 20px;
-    height: 21%;
+    height: 200px;
 }
 
 
@@ -40,10 +42,17 @@ body {
 }
 
 
+
+
+
+
+
+
+/*footer*/
 footer {
     position: relative;
     margin-top: auto;
-    background-color: rgb(66, 66, 66);
+    background-color: white;
     width: 100%;
     height: 100px;
 }
@@ -54,7 +63,7 @@ footer {
     top: 29%;
     left: 50%;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: white;
+    color: rgb(66, 66, 66);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     -ms-transform: translateX(-50%);
@@ -62,6 +71,13 @@ footer {
 }
 
 
+
+
+
+
+
+
+/*header*/
 .header {
     position: relative;
     background-color: rgb(16, 148, 201);
@@ -73,9 +89,9 @@ footer {
 
 .loginBTN {
     position: absolute;
-    right: 1%;
+    right: 20px;
     top: 50%;
-    width: 5%;
+    width: 100px;
     height: 50%;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     border: none;
@@ -88,9 +104,9 @@ footer {
 
 .postBTN {
     position: absolute;
-    right: 7%;
+    right: 130px;
     top: 50%;
-    width: 8%;
+    width: 160px;
     height: 50%;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     border: none;
@@ -120,12 +136,24 @@ footer {
 }
 
 
+
+
+
+
+
+
+/*content*/
+.content {
+    margin-top: 3%;
+}
+
+
 .post {
-    border: 2px solid rgb(184, 184, 184);
+    border: 1px solid rgba(184, 184, 184, 0.521);
     border-radius: 20px;
     width: 40%;
     margin-bottom: 1%;
-    background-color: rgba(236, 236, 236, 0.541);
+    background-color: white;
 }
 
 
@@ -138,6 +166,17 @@ footer {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin-inline: 10%;
     margin-bottom: 5%;
+}
+
+
+.likeBTN {
+    color: white;
+    width: 80px;
+    height: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border: none;
+    background-color: rgb(12, 112, 151);
+    border-radius: 20px;
 }
 
 
@@ -161,3 +200,86 @@ footer {
 }
 
 
+.likeBTN:hover {
+    background-color: rgb(10, 87, 117);
+}
+
+
+
+
+
+
+
+/*login*/
+.loginBody {
+    background-color: rgb(16, 148, 201);
+}
+
+
+.logoLogIn {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    font-size: 300%;
+    margin-top: 20px;
+}
+
+
+.registerForm {
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    background-color: white;
+    width: 30%;
+    border-radius: 30px;
+}
+
+
+.loginForm {
+    position: absolute;
+    top: 25%;
+    right: 15%;
+    background-color: white;
+    width: 30%;
+    border-radius: 30px;
+}
+
+
+.loginText {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+.loginH {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-bottom: 10%;
+}
+
+
+.loginInput {
+    width: 60%;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 20px;
+}
+
+
+.loginFormBTN {
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border: none;
+    background-color: rgb(12, 112, 151);
+    border-radius: 20px;
+}
+
+
+.loginFormBTN:hover {
+    background-color: rgb(10, 87, 117);
+}
+
+
+.loginLogoLink {
+    text-decoration: none;
+}

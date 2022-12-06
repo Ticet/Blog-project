@@ -31,8 +31,18 @@
 
 
             <!--Create a post link-->
-            
-            <button class="postBTN"><a class="loginBTNText" href="postpage.html">Create a post</a></button>
+            <?php
+                if($userID) { 
+                ?>
+                    <button class="postBTN"><a class="loginBTNText" href="postpage.html">Create a post</a></button>
+                <?php
+                }
+                else {
+                ?>
+                    <button class="postBTN"><a class="loginBTNText" href="loginpage.html">Create a post</a></button>
+                <?php
+                }
+            ?>
         </div>
 
 
@@ -40,7 +50,7 @@
         <div class="content">
             <!--Calls a funtion to display posts from database-->
             <div class="posts">
-                <?php displayPosts($userID);?>
+                <?php displayPosts($userID, 'index.php');?>
             </div>
 
             <!--Tags-->

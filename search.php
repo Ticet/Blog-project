@@ -40,7 +40,7 @@
         <div class="content">
             <!--Calls a funtion to display posts by tag from database-->
             <div class="posts">
-                <?php displayPostsByTag();?>
+                <?php displayPostsByTag($userID, 'search.php');?>
             </div>
 
             <!--Tags-->

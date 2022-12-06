@@ -5,46 +5,50 @@
     </head>
 
 
-    <body>
+    <body class="loginBody">
         <!--home button-->
-        <button><a href="index.php">HOME</a></button>
+        <center><a class="loginLogoLink" href="index.php"><h1 class="logoLogIn">Blog&Blog</h1></a></center>
         <br>
 
 
         <!--Register form-->
-        <h1>Register</h1>
-        <form action="scripts/register.php" method="post">
-            <p>Username</p>
-            <input type="text" name="username">
-            <br>
+        <div class="registerForm">
+            <center><h1 class="loginH">Register</h1></center>
+            <form action="scripts/register.php" method="post">
+                <center><p class="loginText">Username</p></center>
+                <center><input class="loginInput" type="text" name="username"></center>
+                <br>
 
-            <p>E-mail</p>
-            <input type="text" name="email">
-            <p>Password</p>
-            <br>
+                <center><p class="loginText">E-mail</p></center>
+                <center><input class="loginInput" type="text" name="email"></center>        
+                <br>
 
-            <input type="password" name="password">
-            <br>
+                <center><p class="loginText">Password</p></center>
+                <center><input class="loginInput" type="password" name="password"></center>
+                <br>
 
-            <button type="submit">Register</button>
-            <br>
-        </form>
+                <center><button class="loginFormBTN" type="submit">Register</button></center>
+                <br>
+            </form>
+        </div>
 
 
         <!--Login form-->\
-        <h1>Log In</h1>
-        <form action="scripts/login.php" method="post">
-            <p>Username</p>
-            <input type="text" name="username">
-            <br>
+        <div class="loginForm">
+            <center><h1 class="loginH">Log In</h1></center>
+            <form action="scripts/login.php" method="post">
+                <center><p class="loginText">Username</p></center>
+                <center><input class="loginInput" type="text" name="username"></center>
+                <br>
 
-            <p>Password</p>
-            <input type="password" name="password">
-            <br>
-            
-            <button type="submit">Log In</button>
-            <br>
-        </form>
+                <center><p class="loginText">Password</p></center>
+                <center><input class="loginInput" type="password" name="password"></center>
+                <br>
+                
+                <center><button class="loginFormBTN" type="submit">Log In</button></center>
+                <br>
+            </form>
+        </div>
 
     </body>
 

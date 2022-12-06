@@ -4,6 +4,7 @@
     $userID = $_SESSION['userID'];
     $postIDArray = explode(' ', $_POST['likeButton']);
     $postID = $postIDArray[1];
+    $pageName = $postIDArray[2];
 
 
     echo $postIDArray[0];
@@ -27,18 +28,18 @@
 
     if(!$isLiked) {
         if(!$userID) {
-            header('Location: ../loginpage.html');
+            header("Location: ../loginpage.html");
         }
         else {
             mysqli_query($conn, $query);
             mysqli_query($conn, $addLikesQuery);
-            header('Location: ../index.php');
+            header("Location: ../$pageName");
         }
     }
     else {
         mysqli_query($conn, $unlikeQuery);
         mysqli_query($conn, $removeLikesQuery);
-        header('Location: ../index.php');
+        header("Location: ../$pageName");
     }
 
 ?>
