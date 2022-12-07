@@ -283,3 +283,88 @@ footer {
 .loginLogoLink {
     text-decoration: none;
 }
+
+
+
+
+
+
+
+
+/*create post*/
+.postFormDiv {
+    background-color: rgb(16, 148, 201);
+    border: none;
+    width: 60%;
+    height: 750px;
+    border-radius: 20px;
+    margin-top: 1%;
+}
+
+
+.postInputName {
+    width: 70%;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 20px;
+    border: none;
+}
+
+
+.postInputContent {
+    width: 70%;
+    height: 250px;
+    border-radius: 20px;
+    font-size: 20px;
+    border: none;
+}
+
+
+.postInputTags {
+    width: 70%;
+    height: 80px;
+    border-radius: 20px;
+    font-size: 20px;
+    border: none;
+}
+
+
+.postText {
+    margin-top: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    font-size: 20px;
+}
+
+
+.postCreateBTN {
+    font-size: 18px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: rgba(0, 0, 0, 0.87);
+    width: 120px;
+    height: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border: none;
+    background-color: white;
+    border-radius: 20px;
+}
+
+
+.postForm {
+    position: relative;
+    top: 40px;
+}
+
+
+.postCreateH {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgba(0, 0, 0, 0.87);
+    margin-bottom: 0px;
+    font-size: 40px;
+}
+
+
+.postCreateBTN:hover {
+    background-color: rgb(219, 219, 219);
+}

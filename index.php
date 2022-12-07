@@ -34,7 +34,7 @@
             <?php
                 if($userID) { 
                 ?>
-                    <button class="postBTN"><a class="loginBTNText" href="postpage.html">Create a post</a></button>
+                    <button class="postBTN"><a class="loginBTNText" href="postpage.php">Create a post</a></button>
                 <?php
                 }
                 else {
