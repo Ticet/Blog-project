@@ -7,6 +7,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>Blog&Blog</title>
         <link rel="stylesheet" href="style.css">
     </head>
 
