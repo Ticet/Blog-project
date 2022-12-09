@@ -14,8 +14,7 @@
         $query = "select * from post";
         $result = mysqli_query($conn, $query);
         $postCounter = getNumberOfPages()['count(*)'];
-        //$pageCounter = ceil($postCounter / 10);
-        $pageCounter = 15;
+        $pageCounter = ceil($postCounter / 10);
         
 
         //check the page number from url or if if its the first page set page to 1
@@ -89,15 +88,173 @@
         <!--page select-->
         <center><div class="pageSelect">
             <?php
-            for($i=1; $i<$pageCounter+1; $i++) {
-                if($i == $pageNum) {?>
-                <a class="<?php echo'curPageSelectNumber';?>" href="index.php?page=<?php echo $i;?>"><?php echo $i;?></a>
-                <?php }else {?>
-                <a class="pageSelectNumber" href="index.php?page=<?php echo $i;?>"><?php echo $i;?></a>
-                <?php
-                }
-            }
+            switch($pageNum) {
+                //first 3 pages
+                case $pageNum < 5:
+                    if($pageCounter>5) {
+                        for($i=1; $i<6; $i++) {
+                            if($i == $pageNum) {?>
+                            <a class="<?php echo'curPageSelectNumber';?>" href="index.php?page=<?php echo $i;?>"><?php echo $i;?></a>
+                            <?php }else {?>
+                            <a class="pageSelectNumber" href="index.php?page=<?php echo $i;?>"><?php echo $i;?></a>
+                            <?php
+                            }}?>
+                            <a class="pageSelectNumber">...</>
+                            <a class="pageSelectNumber" href="index.php?page=<?php echo $pageCounter;?>"><?php echo $pageCounter;?></a>
+                            <?php
+                        }
+                        else {
+                            for($i=1; $i<$pageCounter+1; $i++) {
+                                if($i == $pageNum) {?>
+                                <a class="<?php echo'curPageSelectNumber';?>" href="index.php?page=<?php echo $i;?>"><?php echo $i;?></a>
+                                <?php }else {?>
+                                <a class="pageSelectNumber" href="index.php?page=<?php echo $i;?>"><?php echo $i;?></a>
+                                <?php
+                                }}?>
+                                <?php
+                            }
+                        break;
 
+
+                //5th page               
+                case $pageNum == 5: 
+                    if($pageCounter > 8) {
+                        ?>
+                        <a class="pageSelectNumber" href="index.php?page=1">1</a>
+                        <a class="pageSelectNumber">...</>
+                        <?php
+                        for($i=3; $i<$pageNum+3; $i++) {
+                            if($i == $pageNum) {?>
+                            <a class="<?php echo'curPageSelectNumber';?>" href="index.php?page=<?php echo $i;?>"><?php echo $i;?></a>
+                            <?php }else {?>
+                            <a class="pageSelectNumber" href="index.php?page=<?php echo $i;?>"><?php echo $i;?></a>
+                            <?php
+                            }
+                        }
+                        ?>
+                        <a class="pageSelectNumber">...</>
+                        <a class="pageSelectNumber" href="index.php?page=<?php echo $pageCounter;?>"><?php echo $pageCounter;?></a>
+                        <?php    
+                        break;
+                    }
+                    elseif($pageCounter == 6) {
+                        ?>
+                        <a class="pageSelectNumber" href="index.php?page=1">1</a>
+                        <a class="pageSelectNumber">...</>
+                        <?php
+                        for($i=3; $i<7; $i++) {
+                            if($i == $pageNum) {?>
+                            <a class="<?php echo'curPageSelectNumber';?>" href="index.php?page=<?php echo $i;?>"><?php echo $i;?></a>
+                            <?php }else {?>
+                            <a class="pageSelectNumber" href="index.php?page=<?php echo $i;?>"><?php echo $i;?></a>
+                            <?php
+                            }
+                        }
+                        ?>
+                        <?php    
+                        break;
+                    } 
+                    elseif($pageCounter == 7) {
+                        ?>
+                        <a class="pageSelectNumber" href="index.php?page=1">1</a>
+                        <a class="pageSelectNumber">...</>
+                        <?php
+                        for($i=3; $i<8; $i++) {
+                            if($i == $pageNum) {?>
+                            <a class="<?php echo'curPageSelectNumber';?>" href="index.php?page=<?php echo $i;?>"><?php echo $i;?></a>
+                            <?php }else {?>
+                            <a class="pageSelectNumber" href="index.php?page=<?php echo $i;?>"><?php echo $i;?></a>
+                            <?php
+                            }
+                        }
+                        ?>
+                        <?php    
+                        break;
+                    } 
+                    elseif($pageCounter == 8) {
+                        ?>
+                        <a class="pageSelectNumber" href="index.php?page=1">1</a>
+                        <a class="pageSelectNumber">...</>
+                        <?php
+                        for($i=4; $i<9; $i++) {
+                            if($i == $pageNum) {?>
+                            <a class="<?php echo'curPageSelectNumber';?>" href="index.php?page=<?php echo $i;?>"><?php echo $i;?></a>
+                            <?php }else {?>
+                            <a class="pageSelectNumber" href="index.php?page=<?php echo $i;?>"><?php echo $i;?></a>
+                            <?php
+                            }
+                        }
+                        ?>
+                        <?php    
+                        break;
+                    } 
+                    else {
+                        ?>
+                        <a class="pageSelectNumber" href="index.php?page=1">1</a>
+                        <a class="pageSelectNumber">...</>
+                        <?php
+                        for($i=3; $i<6; $i++) {
+                            if($i == $pageNum) {?>
+                            <a class="<?php echo'curPageSelectNumber';?>" href="index.php?page=<?php echo $i;?>"><?php echo $i;?></a>
+                            <?php }else {?>
+                            <a class="pageSelectNumber" href="index.php?page=<?php echo $i;?>"><?php echo $i;?></a>
+                            <?php
+                            }
+                        }
+                        ?>
+                        <?php    
+                        break;
+                    }
+
+
+                //last 3 pages
+                case $pageNum > $pageCounter-4:
+                    if($pageCounter > 5) {
+                        ?>
+                        <a class="pageSelectNumber" href="index.php?page=1">1</a>
+                        <a class="pageSelectNumber">...</>
+                        <?php
+                        for($i=$pageCounter-4; $i<$pageCounter+1; $i++) {
+                            if($i == $pageNum) {?>
+                            <a class="<?php echo'curPageSelectNumber';?>" href="index.php?page=<?php echo $i;?>"><?php echo $i;?></a>
+                            <?php }else {?>
+                            <a class="pageSelectNumber" href="index.php?page=<?php echo $i;?>"><?php echo $i;?></a>
+                            <?php
+                            }
+                        }
+                    }
+                    else {
+                        for($i=$pageCounter-3; $i<$pageCounter+1; $i++) {
+                            if($i == $pageNum) {?>
+                            <a class="<?php echo'curPageSelectNumber';?>" href="index.php?page=<?php echo $i;?>"><?php echo $i;?></a>
+                            <?php }else {?>
+                            <a class="pageSelectNumber" href="index.php?page=<?php echo $i;?>"><?php echo $i;?></a>
+                            <?php
+                            }
+                        }
+                    }
+                    break;
+                
+
+                
+                //middle pages
+                case $pageNum > 4:
+                    ?>
+                    <a class="pageSelectNumber" href="index.php?page=1">1</a>
+                    <a class="pageSelectNumber">...</>
+                    <?php
+                    for($i=$pageNum-2; $i<$pageNum+3; $i++) {
+                        if($i == $pageNum) {?>
+                        <a class="<?php echo'curPageSelectNumber';?>" href="index.php?page=<?php echo $i;?>"><?php echo $i;?></a>
+                        <?php }else {?>
+                        <a class="pageSelectNumber" href="index.php?page=<?php echo $i;?>"><?php echo $i;?></a>
+                        <?php
+                        }
+                    }?>
+                    <a class="pageSelectNumber">...</>
+                    <a class="pageSelectNumber" href="index.php?page=<?php echo $pageCounter;?>"><?php echo $pageCounter;?></a>
+                    <?php              
+            }
         ?>
         </div></center>
         <?php
